@@ -236,9 +236,6 @@ TARGET_SCREEN_DENSITY := 440
 # Security patch level
 VENDOR_SECURITY_PATCH := 2023-07-01
 
-# Sensor multi HAL
-USE_SENSOR_MULTI_HAL := true
-
 # Sepolicy
 include device/qcom/sepolicy_vndr/legacy-um/SEPolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
