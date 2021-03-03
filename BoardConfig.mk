@@ -144,11 +144,10 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 
 BOARD_KERNEL_CMDLINE += \
-    androidboot.console=ttyMSM0 \
+    androidboot.fstab_suffix=qcom \
+    androidboot.init_fatal_reboot_target=recovery \
     androidboot.hardware=qcom \
     androidboot.usbcontroller=4e00000.dwc3 \
-    console=ttyMSM0,115200n8 \
-    earlycon=msm_geni_serial,0x4a90000 \
     loop.max_part=7 \
     lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
