@@ -137,7 +137,6 @@ BOARD_KERNEL_CMDLINE += \
     androidboot.fstab_suffix=qcom \
     androidboot.init_fatal_reboot_target=recovery \
     androidboot.hardware=qcom \
-    androidboot.memcg=1 \
     androidboot.usbcontroller=4e00000.dwc3 \
     console=ttyMSM0,115200n8 \
     earlycon=msm_geni_serial,0x4a90000 \
