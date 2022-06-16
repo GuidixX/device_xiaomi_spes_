@@ -14,3 +14,8 @@ allow init proc:file write;
 allow init proc_tp_gesture:file rw_file_perms;
 allow init sysfs:file setattr;
 allow init sysfs_android_usb:file rw_file_perms;
+allow init sysfs_devices_block:file write;
+allow init vendor_file:file execute;
+
+# Allow init to set attribute to sysfs_kprofiles
+allow init sysfs_kprofiles:file { setattr };
