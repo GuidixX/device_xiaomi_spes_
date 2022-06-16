@@ -15,3 +15,6 @@ allow init {
   sysfs_android_usb
   sysfs_devices_block
 }:file rw_file_perms;
+
+# Allow init to set attribute to sysfs_kprofiles
+allow init sysfs_kprofiles:file { setattr };

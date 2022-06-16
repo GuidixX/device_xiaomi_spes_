@@ -130,6 +130,12 @@ on boot
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop vendor.usb.controller 4e00000.dwc3
+	
+    # Allow system to manipulate KProfiles modes and parameters
+    chown system system /sys/module/kprofiles/parameters/auto_kp
+    chmod 0660 /sys/module/kprofiles/parameters/auto_kp
+    chown system system /sys/kernel/kprofiles/kp_mode
+    chmod 0660 /sys/kernel/kprofiles/kp_mode
 
     # Sensors
     start vendor.sensors
