@@ -468,7 +468,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
     android.hardware.sensors@2.1-service.xiaomi-multihal \
-    libsensorndkbridge
+    libsensorndkbridge \
+    sensors.xiaomi
 
 # Service Tracker
 PRODUCT_PACKAGES += \
