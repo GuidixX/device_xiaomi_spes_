@@ -131,6 +131,9 @@ BOARD_KERNEL_CMDLINE += \
     service_locator.enable=1 \
     swiotlb=2048 \
     kpti=off
+    
+BOARD_KERNEL_CMDLINE +=  init.is_dt2w_sensor=1
+BOARD_KERNEL_CMDLINE +=  init.is_st2w_sensor=1
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := vendor/spes-perf_defconfig
@@ -226,6 +229,13 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 # VNDK
 BOARD_VNDK_VERSION := current
+
+# Sensors
+SOONG_CONFIG_NAMESPACES += SENSORS_XIAOMI
+SOONG_CONFIG_SENSORS_XIAOMI += USES_DOUBLE_TAP_SENSOR
+SOONG_CONFIG_SENSORS_XIAOMI_USES_DOUBLE_TAP_SENSOR := true
+SOONG_CONFIG_SENSORS_XIAOMI += USES_SINGLE_TAP_SENSOR
+SOONG_CONFIG_SENSORS_XIAOMI_USES_SINGLE_TAP_SENSOR := true
 
 # Sepolicy
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
