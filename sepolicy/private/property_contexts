@@ -17,6 +17,10 @@ ro.sf.hwc_set_default_colormode u:object_r:vendor_display_prop:s0
 vidc.enc.dcvs.extra-buff-count  u:object_r:vendor_display_prop:s0
 gpu.stats.debug.level           u:object_r:vendor_display_prop:s0
 
+# Fling
+ro.max.fling_velocity           u:object_r:exported_system_prop:s0
+ro.min.fling_velocity           u:object_r:exported_system_prop:s0
+
 # Global
 ro.boot.hwc              u:object_r:exported_default_prop:s0
 ro.build.flavor          u:object_r:build_prop:s0
