@@ -216,6 +216,10 @@ PRODUCT_PACKAGES += \
 # Dolby
 TARGET_EXCLUDES_AUDIOFX := true
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
