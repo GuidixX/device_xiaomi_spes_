@@ -20,6 +20,13 @@ ro.bluetooth.wipower=false
 # Blur
 ro.launcher.blur.appLaunch=0
 
+# Battery Saving
+ro.vendor.use_data_netmgrd=true 
+ro.vold.umsdirtyratio=20 
+ro.ril.disable.power.collapse=0 
+power.saving.mode=1
+pm.sleep_mode=1
+
 # Camera
 camera.disable_zsl_mode=1
 vendor.camera.aux.packagelist=com.android.camera,app.grapheneos.camera,org.lineageos.aperture,org.lineageos.aperture.dev
