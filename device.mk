@@ -23,9 +23,8 @@ endif
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/spes/spes-vendor.mk)
 
-ifeq ($(wildcard hardware/xiaomi/Android.bp),)
-$(error Error: cannot found hardware/xiaomi repository, please clone it and try to build again!)
-endif
+# Viper4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
