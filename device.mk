@@ -387,6 +387,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor \
+    android.hardware.power-service-qti
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
