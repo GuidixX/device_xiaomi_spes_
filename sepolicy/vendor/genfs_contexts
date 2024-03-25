@@ -114,6 +114,18 @@ genfscon sysfs /class/leds/vibrator/duration                                    
 genfscon sysfs /class/leds/vibrator/trigger                                                                                                                                          u:object_r:sysfs_leds:s0
 genfscon sysfs /class/leds/vibrator/state                                                                                                                                            u:object_r:sysfs_leds:s0
 
+# label more sysfs wakeup
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/active_count u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/active_time_ms u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/event_count u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/expire_count u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/last_change_ms u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/max_time_ms u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/name u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/prevent_suspend_time_ms u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/total_time_ms u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/wakeup_count u:object_r:sysfs_wakeup:s0
+
 # HBM
 genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/hbm                                                                              u:object_r:vendor_sysfs_graphics:s0
 
