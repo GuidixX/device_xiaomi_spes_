@@ -415,6 +415,9 @@ PRODUCT_PACKAGES += \
     SpesTelephonyOverlay \
     SpesWifiOverlay
 
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.2.vendor
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor
