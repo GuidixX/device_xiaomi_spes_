@@ -422,13 +422,13 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.3.vendor
-
 # Perf
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.3.vendor \
 
 # Public libraries
 PRODUCT_COPY_FILES += \
