@@ -168,6 +168,7 @@ on charger
     setprop sys.usb.configfs 1
     setprop vendor.usb.controller 4e00000.dwc3
     start mi_thermald
+    start vendor.thermal-com
     start vendor.power_off_alarm
     start vendor.qcom-post-boot
 
@@ -215,6 +216,16 @@ service vendor.displayfeature /vendor/bin/displayfeature
     user root
     group root
     task_profiles ServiceCapacityLow
+    disabled
+
+service vendor.thermal-com /vendor/bin/thermal-engine --minimode
+    class charger
+    user root
+    group root system oem_2907
+    socket thermal-send-client stream 0666 system oem_2907
+    socket thermal-recv-client stream 0660 system oem_2907
+    socket thermal-recv-passive-client stream 0666 system oem_2907
+    socket thermal-send-rule stream 0660 system oem_2907
     disabled
 
 on property:init.svc.surfaceflinger=stopped

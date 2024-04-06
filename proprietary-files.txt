@@ -1357,9 +1357,12 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 # Thermal engine - from alioth_global-user 12 RKQ1.200826.002 V13.0.2.0.SKHMIXM release-keys
 vendor/etc/init/init.mi_thermald.rc|6505d89e19957888612d89f6769585a7d26af080
 
-# Thermal engine
+# Thermal engine - MOTO_SM6225
+vendor/bin/thermal-engine
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
+
+# MI Thermal
 vendor/bin/mi_thermald
 
 # Thermal configs
