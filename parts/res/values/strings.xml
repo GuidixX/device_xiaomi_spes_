@@ -15,6 +15,19 @@
      limitations under the License.
 -->
 <resources>
+    <!-- HBM settings -->
+    <string name="hbm_fragment_title">High brightness mode</string>
+    <string name="hbm_fragment_summary">Settings for HBM</string>
+    <string name="hbm_mode_title">HBM</string>
+    <string name="hbm_mode_summary">Enable peak luminance</string>
+    <string name="auto_hbm_title">Automatic HBM</string>
+    <string name="auto_hbm_summary">Enable peak luminance based on sunlight</string>
+    <string name="auto_hbm_threshold_title"></string>
+    <string name="auto_hbm_threshold_summary">threshold (lux)</string>
+    <string name="hbm_disable_time_title"></string>
+    <string name="hbm_disable_time_summary">disable delay (seconds)</string>
+    <string name="hbm_mode_warning">Long time usage of High brightness mode may damage your display</string>
+
     <!-- Refresh Rate Settings -->
     <string name="refresh_title">App Refresh Rate</string>
     <string name="refresh_summary">Adjust per-app maximum refresh rate</string>
@@ -24,17 +37,8 @@
 
     <!-- DC dimming settings -->
     <string name="dc_dimming_enable_title">DC Dimming</string>
-    <string name="dc_dimming_enable_summary">DC Dimming reduces eye strain in low light conditions (Note: reduce image quality)</string>
-    <string name="dc_dimming_enable_summary_not_supported">DC Dimming is not currently supported by the kernel</string>
-
-    <!--Display settings fragment -->
-    <string name="display_settings_title">Custom display settings</string>
-    <string name="display_settings_summary">HBM, DC Dimming</string>
-
-    <!-- HBM settings -->
-    <string name="hbm_mode_title">High Brightness Mode</string>
-    <string name="hbm_mode_summary">High Brightness Mode allows the display panel brightness to go above the maximum stock value. Which helps in improving visibility in direct sunlight</string>
-    <string name="hbm_enable_summary_not_supported">HBM is not currently supported by the kernel</string>
+    <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Clear speaker</string>
