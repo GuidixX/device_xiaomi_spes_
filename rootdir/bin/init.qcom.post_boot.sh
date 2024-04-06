@@ -89,7 +89,7 @@ echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
 echo 1516800 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
-echo 691200 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+echo 300000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/rtg_boost_freq
 
 # configure governor settings for big cluster
@@ -97,7 +97,7 @@ echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
 echo 1344000 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
-echo 1056000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+echo 3000000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/rtg_boost_freq
 
 echo "0:1190000" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
