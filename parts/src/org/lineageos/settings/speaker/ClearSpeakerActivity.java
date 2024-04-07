@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.widget.R;
 
 public class ClearSpeakerActivity extends CollapsingToolbarBaseActivity {
 
@@ -30,16 +31,12 @@ public class ClearSpeakerActivity extends CollapsingToolbarBaseActivity {
         super.onCreate(savedInstanceState);
 
 
-        Fragment fragment = getFragmentManager().findFragmentById(
-            com.android.settingslib.collapsingtoolbar.R.id.content_frame
-        );
+        Fragment fragment = getFragmentManager().findFragmentById(R.id.content_frame);
         ClearSpeakerFragment clearSpeakerFragment;
         if (fragment == null) {
             clearSpeakerFragment = new ClearSpeakerFragment();
             getFragmentManager().beginTransaction()
-                    .add(
-                    com.android.settingslib.collapsingtoolbar.R.id.content_frame,
-                    clearSpeakerFragment)
+                    .add(R.id.content_frame, clearSpeakerFragment)
                     .commit();
         }
     }
