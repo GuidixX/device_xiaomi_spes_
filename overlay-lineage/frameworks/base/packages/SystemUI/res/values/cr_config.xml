@@ -16,7 +16,7 @@
 -->
 <resources>
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
-    <integer name="config_screenRecorderMaxFramerate">90</integer>
+    <integer name="config_screenRecorderMaxFramerate">60</integer>
 
     <!-- The CPU temperature sensor path, defaults to empty -->
     <string name="config_cpuTempSensor" translatable="false">/sys/class/thermal/thermal_zone39/temp</string>
