@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- HBM settings -->
+    <string name="hbm_fragment_title">Modo de alto brilho (HBM)</string>
+    <string name="hbm_fragment_summary">Modo de alto brilho (HBM)</string>
+    <string name="hbm_mode_title">HBM</string>
+    <string name="hbm_mode_summary">Habilitar peak luminance</string>
+    <string name="auto_hbm_title">HBM automático</string>
+    <string name="auto_hbm_summary">Habilitar modo peak luminance com base na luz do sol</string>
+    <string name="auto_hbm_threshold_title"></string>
+    <string name="auto_hbm_threshold_summary">Limite máximo (lux)</string>
+    <string name="hbm_disable_time_title">Desativado</string>
+    <string name="hbm_disable_time_summary">Desabilitar intervalo (segundos)</string>
+    <string name="hbm_mode_warning">Um longo tempo de uso do HBM danificará o seu display, cuidado</string>
+
+    <!-- Refresh Rate Settings -->
+    <string name="refresh_rate_tile_title">Taxa de atualização</string>
+    <string name="refresh_title">Taxa de atualização por app</string>
+    <string name="refresh_summary">Ajustar taxa de atualização por aplicativo</string>
+    <string name="refresh_default">Padrão</string>
+    <string name="refresh_standard">Padrão (60Hz)</string>
+    <string name="refresh_high">Alto (90Hz)</string>
+
+    <!-- Clear Speaker -->
+    <string name="clear_speaker_title">Limpar alto-falantes</string>
+    <string name="clear_speaker_summary">Toca um áudio de 30s que limpa os auto-falantes</string>
+    <string name="clear_speaker_description">Execute essa funcionalidade caso seus alto-falantes estejam obstruídos por, por exemplo, poeira.\n\nSe seus alto-falantes estão muito bloquados, execute durante 2-5 minutos desse áudio enquanto agita com os auto-falantes para baixo.\n\nAVISO: verifique se seus fones de ouvido estão desconectados.</string>
+
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_enable_summary">Reduz o cançaso da vista em situações de baixa claridade do ambiente</string>
+    <string name="dc_dimming_enable_summary_not_supported">O DC Dimming não é suportado, atualmente, pelo kernel</string>
+</resources>
