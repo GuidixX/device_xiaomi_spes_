@@ -12,8 +12,25 @@ rm -rf hardware/google/pixel/kernel_headers/Android.bp
 # Remove hardware/lineage/compat to avoid conflicts
 rm -rf hardware/lineage/compat/Android.bp
 
-# Remove Miuicamera vendorsetup.sh & Clone Miuicamera.apk manully
-cd vendor/xiaomi/camera/
-rm -rf vendorsetup.sh && cd proprietary/system/priv-app/MiuiCamera
-rm -rf MiuiCamera.apk && megadl 'https://mega.nz/file/tpsDlTZK#MHn_v46YNN4qZCgX3XGmWY26EIea0NY3yBCTbdebdm0'
-cd ../../../../../../../
+# Fix Miuicamera
+CAMERA_DIR="vendor/xiaomi/camera"
+PROPRIETARY_DIR="proprietary/system/priv-app/MiuiCamera"
+URL="https://sourceforge.net/projects/muralivijay/files/fixes/spes/camera/MiuiCamera.apk"
+
+# Remove vendorsetup script of MiuiCamera
+if [ -d "$CAMERA_DIR" ]; then
+rm -rf ${CAMERA_DIR}/vendorsetup.sh
+
+# Calculate the checksum of MiuiCamera.apk
+current_checksum=$(md5sum "${CAMERA_DIR}/${PROPRIETARY_DIR}/MiuiCamera.apk" | awk '{ print $1 }')
+
+# Expected MiuiCamera checksum
+expected_checksum="8f1d2365de634363c74a1c9434e633e2"
+
+# Compare the current checksum with the expected checksum
+ if [ "$current_checksum" != "$expected_checksum" ]; then
+   echo -e "${color}Fixing MiuiCamera Please Wait ${end}"
+   rm -rf ${CAMERA_DIR}/${PROPRIETARY_DIR}/MiuiCamera.apk
+   wget ${URL} -O ${CAMERA_DIR}/${PROPRIETARY_DIR}/MiuiCamera.apk
+ fi
+fi
