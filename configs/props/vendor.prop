@@ -251,7 +251,7 @@ wifi.aware.interface=wifi-aware0
 ro.hardware.wlan.vendor=qcom
 
 # SoC
-ro.soc.manufacturer=Qualcomm
+ro.soc.manufacturer=QTI
 ro.soc.model=SM6225
 
 # Zygote
