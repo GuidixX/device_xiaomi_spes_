@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015-2016 The CyanogenMod Project
-                   2017-2021 The LineageOS Project
+                   2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -76,8 +76,8 @@
 
         <service
             android:name=".thermal.ThermalService"
-            android:permission="ThermalService">
-        </service>
+            android:exported="true"
+            android:permission="ThermalService" />
 
         <activity
             android:name=".display.DcDimmingSettingsActivity"
@@ -144,6 +144,7 @@
 
         <activity
             android:name=".thermal.ThermalActivity"
+            android:exported="false"
             android:label="@string/thermal_title"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
