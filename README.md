@@ -18,4 +18,5 @@ Redmi Note 11 was announced and released in January/February 2022.
 |                 Display | 1080 x 2400 pixels, 6.43 inches (~409 ppi pixel density)            |
 |                  Camera | Main 50 MP f/1.8, ultrawide lens, macro lens, depth lens, LED flash |
 
-## Device picture ![Redmi Note 11](https://i.imgur.com/WfbCmGR.png "Redmi Note 11")
+## Device picture 
+![Redmi Note 11](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-11-global-1.jpg "Redmi Note 11")
