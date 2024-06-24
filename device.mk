@@ -11,18 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Enable Virtual A/B
-ifneq ($(WITH_GMS),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
-else
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_with_xor.mk)
-endif
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/spes/spes-vendor.mk)
-
-ifeq ($(wildcard hardware/xiaomi/Android.bp),)
-$(error Error: cannot found hardware/xiaomi repository, please clone it and try to build again!)
-endif
 
 # Enable Dynamic partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -251,14 +243,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
 # Health
-ifneq ($(wildcard vendor/qcom/opensource/healthd-ext/Android.bp),)
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti
-else
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl
-endif
-PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-service
 
 # HIDL
@@ -296,15 +282,15 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor
+     android.hardware.keymaster@4.1.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.spes
 
-# Lineage Health
+# LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
+    vendor.lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_PACKAGES += \
@@ -375,6 +361,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -406,9 +393,6 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
-
-# Quick Tap
-TARGET_SUPPORTS_QUICK_TAP := true
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -520,10 +504,8 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-ifdef CR_VERSION
 PRODUCT_BOOT_JARS += \
     WfdCommon
-endif
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
