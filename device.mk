@@ -405,6 +405,13 @@ PRODUCT_PACKAGES += \
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
 
+# Refreshrate
+PRODUCT_PACKAGES += \
+    RefreshRateParts
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/refreshrate/privapp-permissions-refresh-rate-parts.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-refresh-rate-parts.xml
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
@@ -520,7 +527,3 @@ ifdef CR_VERSION
 PRODUCT_BOOT_JARS += \
     WfdCommon
 endif
-
-# XiaomiParts
-PRODUCT_PACKAGES += \
-    XiaomiParts
