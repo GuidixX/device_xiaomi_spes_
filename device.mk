@@ -222,6 +222,11 @@ TARGET_EXCLUDES_AUDIOFX := true
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# DisplayFeatures
+PRODUCT_PACKAGES += \
+    DisplayFeatures \
+    DisplayFeaturesOverlay
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
