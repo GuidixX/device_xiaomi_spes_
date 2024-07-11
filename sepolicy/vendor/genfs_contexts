@@ -247,8 +247,8 @@ genfscon sysfs /class/leds/vibrator/state                                       
 # HBM
 genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/hbm                                                                                                                u:object_r:vendor_sysfs_graphics:s0
 
-# DC Dimming
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable                                                                                                   u:object_r:vendor_sysfs_graphics:s0
+# DC dimming
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable                                                                                                   u:object_r:sysfs_displayfeatures:s0
 
 # KProfiles
 genfscon sysfs /module/kprofiles/parameters/auto_kp                                                                                                                                  u:object_r:sysfs_kprofiles:s0
