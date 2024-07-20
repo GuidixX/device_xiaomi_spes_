@@ -305,6 +305,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
+# IOS Emoji
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rro_overlays/IOSEmoji/NotoColorEmoji.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/NotoColorEmoji.ttf
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
