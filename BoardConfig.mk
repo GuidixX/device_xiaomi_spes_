@@ -156,9 +156,6 @@ TARGET_KERNEL_CONFIG := vendor/spes-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/spes
 TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1 LLVM_IAS=1
 
-# LMKD
-TARGET_LMKD_STATS_LOG := true
-
 # OTA Assert
 TARGET_OTA_ASSERT_DEVICE := spes,spesn
 
