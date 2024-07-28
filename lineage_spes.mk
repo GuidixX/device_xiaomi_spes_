@@ -23,4 +23,4 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-BUILD_FINGERPRINT := Redmi/spes/spes:13/TKQ1.221114.001/V14.0.5.0.TGCINXM:user/release-keys
+BUILD_FINGERPRINT := Redmi/spes/spes:13/TKQ1.221114.001/V816.0.2.0.TGCINXM:user/release-keys
