@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Enable project quotas and case folding
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
 # GSI Keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
