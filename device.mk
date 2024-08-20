@@ -416,6 +416,7 @@ PRODUCT_PACKAGES += \
     SpesTelephonyOverlay \
     SpesWifiOverlay
 
+# Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
@@ -431,7 +432,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Perf
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
