@@ -42,6 +42,13 @@
 	    </interface>
 	</hal>
     <hal format="hidl" optional="true">
+        <name>android.hardware.graphics.allocator</name>
+        <interface>
+            <name>IComposer</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>android.hardware.radio.config</name>
         <version>1.0-5</version>
         <interface>
