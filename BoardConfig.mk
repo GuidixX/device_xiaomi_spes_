@@ -247,7 +247,6 @@ NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/legacy-um/SEPolicy.mk
-
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 ifdef CR_VERSION
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private-cr

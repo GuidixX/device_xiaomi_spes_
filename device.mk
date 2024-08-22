@@ -316,10 +316,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.spes
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service
@@ -393,21 +389,13 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
-# Perf
-PRODUCT_PACKAGES += \
-    libqti-perfd-client
-
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3.vendor \
-    android.hardware.power-service.xiaomi-libperfmgr
+    android.hardware.power@1.3.vendor
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Public libraries
 PRODUCT_COPY_FILES += \
