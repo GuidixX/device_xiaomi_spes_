@@ -160,8 +160,7 @@ BOARD_KERNEL_CMDLINE += \
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := vendor/spes-perf_defconfig
-TARGET_KERNEL_HEADERS := kernel/xiaomi/sm6225
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6225
+TARGET_KERNEL_SOURCE := kernel/xiaomi/spes
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_LINUX_KERNEL_VERSION := 4.19
 TARGET_KERNEL_CLANG_VERSION := r450784e
@@ -255,7 +254,6 @@ SOONG_CONFIG_SENSORS_XIAOMI_USES_SINGLE_TAP_SENSOR := true
 # Sepolicy
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy_vndr/legacy-um/SEPolicy.mk
-
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 ifdef CR_VERSION
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private-cr
