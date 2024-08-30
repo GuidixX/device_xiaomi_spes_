@@ -111,6 +111,11 @@ TARGET_USES_CUSTOM_DISPLAY_INTERFACE := true
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := spes,spesn
 
+# Camera
+MALLOC_SVELTE := true
+MALLOC_SVELTE_FOR_LIBC32 := true
+MALLOC_SVELTE_FOR_LIBC64 := true
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/hidl/framework_compatibility_matrix.xml \
