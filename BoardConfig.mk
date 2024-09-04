@@ -140,6 +140,7 @@ BOARD_KERNEL_CMDLINE += \
     androidboot.init_fatal_reboot_target=recovery \
     androidboot.hardware=qcom \
     androidboot.usbcontroller=4e00000.dwc3 \
+    disable_dma32=on \
     loop.max_part=7 \
     lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
