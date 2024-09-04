@@ -131,6 +131,7 @@ BOARD_KERNEL_CMDLINE += \
     msm_rtb.filter=0x237 \
     service_locator.enable=1 \
     swiotlb=2048 \
+    kasan=off \
     kpti=off
     
 BOARD_KERNEL_CMDLINE +=  init.is_dt2w_sensor=1
