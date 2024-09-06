@@ -83,6 +83,9 @@ vendor.qcom.bluetooth.soc=cherokee
 # Camera
 persist.camera.gyro.disable=0
 
+# Certification
+persist.sys.certhook.supports.keybox=false
+
 # Crypto
 ro.crypto.allow_encrypt_override=true
 ro.crypto.dm_default_key.options_format.version=2
