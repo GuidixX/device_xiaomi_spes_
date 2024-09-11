@@ -138,6 +138,7 @@ BOARD_KERNEL_CMDLINE +=  init.is_dt2w_sensor=1
 BOARD_KERNEL_CMDLINE +=  init.is_st2w_sensor=1
 
 TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_CLANG_VERSION := r487747c
 TARGET_KERNEL_CONFIG := vendor/spes-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/spes
 TARGET_KERNEL_CLANG_COMPILE := true
