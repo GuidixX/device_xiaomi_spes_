@@ -724,7 +724,7 @@ DisplayError ColorFeatureCheckingImpl::Init() {
       } else {
         return false;
       }})) {
-    std::all_of(states_.begin(), states_.end(),
+    (void)std::all_of(states_.begin(), states_.end(),
       [](const FeatureInterface *p) {
       if (p) {delete p;} return true;});
     states_.fill(NULL);
@@ -745,7 +745,7 @@ DisplayError ColorFeatureCheckingImpl::Init() {
 }
 
 DisplayError ColorFeatureCheckingImpl::Deinit() {
-  std::all_of(states_.begin(), states_.end(),
+  (void)std::all_of(states_.begin(), states_.end(),
     [](const FeatureInterface *p)
     {if (p) {delete p;} return true;});
   states_.fill(NULL);
