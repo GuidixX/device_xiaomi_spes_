@@ -464,6 +464,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcurl.vendor \
     libprocessgroup.vendor \
+    libnetutils.vendor \
     libsqlite.vendor
 
 PRODUCT_PACKAGES += \
