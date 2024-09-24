@@ -22,7 +22,7 @@ if [ -d "$VIPER_DIR" ]; then
 current_checksum=$(md5sum "${VIPER_DIR}/${APK_DIR}/ViPER4AndroidFX.apk" | awk '{ print $1 }')
 
 # Expected Viper checksum
-expected_checksum="17bac8664245084f9696d979f9c4a9a8"
+expected_checksum="63e5a95bbff062a36207a74b9cf0ae75"
 
 # Compare the current checksum with the expected checksum
  if [ "$current_checksum" != "$expected_checksum" ]; then
