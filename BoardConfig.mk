@@ -156,7 +156,7 @@ BOARD_KERNEL_CMDLINE += \
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := vendor/spes-perf_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6225
+TARGET_KERNEL_SOURCE := kernel/xiaomi/spes
 TARGET_KERNEL_CLANG_COMPILE := true
 KERNEL_SUPPORTS_LLVM_TOOLS := true
 TARGET_LINUX_KERNEL_VERSION := 4.19
@@ -165,9 +165,6 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     LLVM_IAS=1
 
 KERNEL_LD := LD=ld.lld
-
-# LMKD
-TARGET_LMKD_STATS_LOG := true
 
 # Media
 TARGET_DISABLED_UBWC := true
@@ -209,7 +206,6 @@ TARGET_BOARD_PLATFORM := bengal
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
-TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
