@@ -1,0 +1,75 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_config_module_type {
+    name: "sensors_xiaomi_cc_defaults",
+    module_type: "cc_defaults",
+    config_namespace: "SENSORS_XIAOMI",
+    bool_variables: ["USES_UDFPS_SENSOR", "USES_DOUBLE_TAP_SENSOR", "USES_SINGLE_TAP_SENSOR"],
+    properties: ["cppflags"],
+}
+
+sensors_xiaomi_cc_defaults {
+    name: "sensors_xiaomi_defaults",
+    soong_config_variables: {
+        USES_UDFPS_SENSOR: {
+            cppflags: ["-DUSES_UDFPS_SENSOR"],
+        },
+        USES_DOUBLE_TAP_SENSOR: {
+            cppflags: ["-DUSES_DOUBLE_TAP_SENSOR"],
+        },
+        USES_SINGLE_TAP_SENSOR: {
+            cppflags: ["-DUSES_SINGLE_TAP_SENSOR"],
+        },
+    },
+}
+
+cc_library_shared {
+    name: "sensors.xiaomi",
+    defaults: ["hidl_defaults", "sensors_xiaomi_defaults"],
+    srcs: [
+        "Sensor.cpp",
+        "SensorsSubHal.cpp",
+    ],
+    shared_libs: [
+        "android.hardware.sensors@1.0",
+        "android.hardware.sensors@2.0",
+        "android.hardware.sensors@2.0-ScopedWakelock",
+        "android.hardware.sensors@2.1",
+        "libcutils",
+        "libfmq",
+        "libhardware",
+        "libhidlbase",
+        "liblog",
+        "libpower",
+        "libutils",
+    ],
+    static_libs: [
+        "android.hardware.sensors@1.0-convert",
+        "android.hardware.sensors@2.X-multihal",
+    ],
+    cflags: [
+        "-DLOG_TAG=\"sensors.xiaomi\"",
+    ],
+    vendor: true,
+}
+
+cc_library_shared {
+    name: "sensors.udfps",
+    defaults: ["hidl_defaults"],
+    srcs: [
+        "udfps_hal.cpp",
+    ],
+    shared_libs: [
+        "libcutils",
+        "liblog",
+        "libutils",
+    ],
+    header_libs: [
+        "libhardware_headers",
+    ],
+    vendor: true,
+}
