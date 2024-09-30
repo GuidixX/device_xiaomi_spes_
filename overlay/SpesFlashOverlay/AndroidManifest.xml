@@ -5,10 +5,10 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.aperture.spes">
+    package="org.derpfest.flash.spes">
 
     <overlay
         android:isStatic="true"
         android:priority="800"
-        android:targetPackage="org.lineageos.aperture" />
+        android:targetPackage="org.derpfest.flash" />
 </manifest>
